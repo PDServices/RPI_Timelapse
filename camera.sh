@@ -36,6 +36,14 @@ DELAY=30
 while [ 1 = 1 ]
 	do
 		DATE=$(date +"%Y-%m-%d_%H%M%S")
+		# -o = Output
+		# -sh 50 = Image sharpness to 50 (-100 > 100)
+		# -co 0 = Image contrast (-100 > 100)
+		# -br 50 = Brightness (0 > 100)
+		# -sa 0 = Saturation (-100 > 100)
+		# - ISO 300 = set capture ISO (100 > 800)
+		# -hf = Horizontal Flip
+		# -vf = Vertical Flip
 		raspistill -o /home/pi/timelapse/photos/$DATE.jpg -sh 50 -co 0 -br 50 -sa 0 -ISO 300 -q 75 -hf -vf
 		sleep $DELAY
 	done
