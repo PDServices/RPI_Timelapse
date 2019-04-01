@@ -31,7 +31,7 @@
 ##########
 # END_OF_HEADER
 ##########
-DELAY=30
+DELAY=10
 
 while [ 1 = 1 ]
 	do
@@ -44,6 +44,6 @@ while [ 1 = 1 ]
 		# - ISO 300 = set capture ISO (100 > 800)
 		# -hf = Horizontal Flip
 		# -vf = Vertical Flip
-		raspistill -o /home/pi/timelapse/photos/$DATE.jpg -sh 50 -co 0 -br 50 -sa 0 -ISO 300 -q 75 -hf -vf
+		raspistill -o /media/pi/OPTIMA/$DATE.jpg -sh 25 -ex night -awb incandescent
 		sleep $DELAY
 	done
