@@ -45,5 +45,7 @@ while [ 1 = 1 ]
 		# -hf = Horizontal Flip
 		# -vf = Vertical Flip
 		raspistill -o /media/pi/OPTIMA/$DATE.jpg -sh 25 -ex night -awb incandescent
+		fswebcam -r 1280x720 --no-banner --rotate 180 /media/pi/OPTIMA/webcam_$DATE.jpg 
+			#Take the image using the webcam - sudo apt-get install fswebcam to install
 		sleep $DELAY
 	done
