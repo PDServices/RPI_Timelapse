@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 #!/bin/bash
 
 ##################################################
@@ -22,5 +23,8 @@
 
 PROCESS=camera.sh
 PID=`ps -ef | grep ${PROCESS} | grep -v grep | awk '{print$2}'`
+=======
+PID=`ps -ef | grep camera.sh | grep -v grep | awk '{print$2}'`
+>>>>>>> f9597fb7ec3f5b57dc2833b981ef7d0f578fa7ea
 
 kill -9 $PID

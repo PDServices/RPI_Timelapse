@@ -18,8 +18,12 @@
 #
 ##################################################
 # END_OF_HEADER
+<<<<<<< HEAD
 ##################################################
 
+=======
+##########
+>>>>>>> f9597fb7ec3f5b57dc2833b981ef7d0f578fa7ea
 DELAY=10
 
 while [ 1 = 1 ]
@@ -33,8 +37,14 @@ while [ 1 = 1 ]
 		# -ISO 300 = set capture ISO (100 > 800)
 		# -hf = Horizontal Flip
 		# -vf = Vertical Flip
+<<<<<<< HEAD
 		# -ex night = Night exposure
 		# -awb = Auto White Balance
 		raspistill -o /media/pi/OPTIMA/$DATE.jpg -sh 25 -ex night -awb incandescent
+=======
+		raspistill -o /media/pi/OPTIMA/$DATE.jpg -sh 25 -ex night -awb incandescent
+		fswebcam -r 1280x720 --no-banner --rotate 180 /media/pi/OPTIMA/webcam_$DATE.jpg 
+			#Take the image using the webcam - sudo apt-get install fswebcam to install
+>>>>>>> f9597fb7ec3f5b57dc2833b981ef7d0f578fa7ea
 		sleep $DELAY
 	done
