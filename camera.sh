@@ -20,7 +20,7 @@
 # END_OF_HEADER
 ##################################################
 
-DELAY=10
+DELAY=150
 
 while [ 1 = 1 ]
 	do
@@ -35,9 +35,11 @@ while [ 1 = 1 ]
 		# -vf = Vertical Flip
 		# -ex night = Night exposure
 		# -awb = Auto White Balance
-		raspistill -o /media/pi/OPTIMA/$DATE.jpg -sh 25 -ex night -awb incandescent
-		raspistill -o /media/pi/OPTIMA/$DATE.jpg -sh 25 -ex night -awb incandescent
-		fswebcam -r 1280x720 --no-banner --rotate 180 /media/pi/OPTIMA/webcam_$DATE.jpg 
-			#Take the image using the webcam - sudo apt-get install fswebcam to install
+#		raspistill -o /media/pi/OPTIMA/$DATE.jpg -sh 25 -ex night -awb incandescent
+
+python ./scrollphat_on.py
+	#Take the image using the webcam - sudo apt-get install fswebcam to install
+		fswebcam -c fswebcam.conf --save /home/pi/RPI_Timelapse/photos/webcam_$DATE.jpg 	
+python ./scrollphat_off.py
 		sleep $DELAY
 	done
